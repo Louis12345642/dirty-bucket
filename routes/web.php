@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\beats;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\testController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -35,4 +37,10 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+Route::get('/hello', [testController::class, 'test'])->name('test');
+Route::get('/beats', [beats::class, 'show']);
+Route::get('/mubarak/{id}',[beats::class,'getMe']);
+
+
+
+require __DIR__ . '/auth.php';
