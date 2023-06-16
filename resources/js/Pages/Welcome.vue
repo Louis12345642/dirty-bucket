@@ -1,6 +1,10 @@
 <script setup>
 import { Head, Link } from '@inertiajs/vue3';
 import clientLayout from '@/Layouts/client/clientLayout.vue';
+import kitVue from '../Components/client-components/kit.vue';
+import heroSectionVue from '../Components/client-components/hero-section.vue';
+import kitNavbar  from '../Components/client-components/kit-nav.vue';
+
 
 defineProps({
     canLogin: {
@@ -22,7 +26,14 @@ defineProps({
 
 <template>
 <client-layout>
-    <h1>hello friends</h1>
+<heroSectionVue/>
+
+<kitNavbar></kitNavbar>
+    <section class="grid grid-cols-1 px-10 md:px-28  gap-10 mt-10 mb-6 justify-center md:grid md:grid-cols-3 md:justify-center sm:grid sm:grid-cols-2 ">
+    <kitVue/>
+    <kitVue/>
+    <kitVue/>
+    </section>
 </client-layout>
 </template>
 
