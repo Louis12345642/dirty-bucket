@@ -1,5 +1,8 @@
 <?php
+
+use App\Http\Controllers\BeatCategoryController;
 use App\Http\Controllers\beats;
+use App\Http\Controllers\beatsController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\testController;
 use Illuminate\Foundation\Application;
@@ -35,11 +38,8 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-// Route::get('/hello', [testController::class, 'test'])->name('test');
-// Route::get('/beats', [beats::class, 'show']);
-// Route::get('/mubarak/{id}',[beats::class,'getMe']);
-
-
+Route::get('/test',[beatsController::class,'show']);
+route::get('/beat-category',[BeatCategoryController::class,'index']);
 
 
 require __DIR__ . '/auth.php';
