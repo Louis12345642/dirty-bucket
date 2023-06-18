@@ -5,9 +5,9 @@ namespace Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\BeatCategory>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Beats>
  */
-class BeatCategoryFactory extends Factory
+class BeatsFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -21,9 +21,6 @@ class BeatCategoryFactory extends Factory
             'slug'=>fake()->slug(),
             'created_at' => now(),
             'updated_at' => now(),
-        
-        
-       
         ];
     }
 }
