@@ -35,9 +35,10 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::get('/hello', [testController::class, 'test'])->name('test');
-Route::get('/beats', [beats::class, 'show']);
-Route::get('/mubarak/{id}',[beats::class,'getMe']);
+// Route::get('/hello', [testController::class, 'test'])->name('test');
+// Route::get('/beats', [beats::class, 'show']);
+// Route::get('/mubarak/{id}',[beats::class,'getMe']);
+
 
 
 
